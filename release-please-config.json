@@ -1,7 +1,0 @@
-{
-  "packages": {
-    ".": {
-      "changelog-path": "/notes/CHANGELOG.md"
-    }
-  }
-}
