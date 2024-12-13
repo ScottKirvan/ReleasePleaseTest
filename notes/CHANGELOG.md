@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.12](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.11...v1.2.12) (2024-12-13)
+
+
+### Bug Fixes
+
+* moving my manifest ([d43f9ce](https://github.com/ScottKirvan/ReleasePleaseTest/commit/d43f9cec2eb6c9312a997d508ec41c153db57f6f))
+
 ## [1.2.11](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.10...v1.2.11) (2024-12-13)
 
 
