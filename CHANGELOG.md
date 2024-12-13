@@ -2,6 +2,13 @@ prepend text
 
 # Changelog
 
+## [1.3.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.4...v1.3.0) (2024-12-13)
+
+
+### Features
+
+* test ([78140e2](https://github.com/ScottKirvan/ReleasePleaseTest/commit/78140e2bddf78c1ab3e3275f95dac20bc87936ae))
+
 ## [1.2.4](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.3...v1.2.4) (2024-12-13)
 
 
