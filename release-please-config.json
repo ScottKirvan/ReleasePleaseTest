@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "simple",
+  "include-component-in-tag": false,
+  "changelog-path": "notes/CHANGELOG.md",
+  "packages": {
+    ".": {
+      "extra-files": [
+        "src/main/resources/project.properties",
+        "build.gradle.kts"
+      ]
+    }
+  }
+}
