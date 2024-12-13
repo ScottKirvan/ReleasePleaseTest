@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.3](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.0.1...v1.2.3) (2024-12-13)
+
+
+### Bug Fixes
+
+* poo ([e813afe](https://github.com/ScottKirvan/ReleasePleaseTest/commit/e813afe5e1726746c49b59c69e01fc5f7b220aa5))
+* trying to fix path ([20c43e5](https://github.com/ScottKirvan/ReleasePleaseTest/commit/20c43e57a6f1c25bf48bec0ce4dd9f3faac7e39b))
+
 ## [1.0.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.0.1...v1.0.2) (2024-12-13)
 
 
