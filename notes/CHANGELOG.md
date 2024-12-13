@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.11](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.10...v1.2.11) (2024-12-13)
+
+
+### Bug Fixes
+
+* delete a file ([cb32fed](https://github.com/ScottKirvan/ReleasePleaseTest/commit/cb32fed84a05809cfc58c95f4acf97e6992a8f6e))
+
 ## [1.2.10](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.10...v1.2.10) (2024-12-13)
 
 
