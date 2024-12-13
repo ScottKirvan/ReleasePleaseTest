@@ -21,7 +21,7 @@ jobs:
           # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           # token: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ github.token }}
-          # config-file: config.json
+          config-file: .github/release-please/release-please-config.json
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
           # release-type: simple
