@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.0.1...v1.0.2) (2024-12-13)
+
+
+### Bug Fixes
+
+* poo ([e813afe](https://github.com/ScottKirvan/ReleasePleaseTest/commit/e813afe5e1726746c49b59c69e01fc5f7b220aa5))
+
 ## [1.0.1](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.0.0...v1.0.1) (2024-12-13)
 
 
