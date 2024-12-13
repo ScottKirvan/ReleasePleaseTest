@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Changelog Template:
 - ***Added*** - for new features.
 - ***Changed*** - for changes in existing functionality.
-- ***Depricated*** - for soon-to-be removed features.
+- ***Deprecated*** - for soon-to-be removed features.
 - ***Removed*** - for now removed features.
 - ***Fixed*** - for any bug fixes.
 - ***Refactored*** - no functional changes, just cleanup or reorganizing.
