@@ -2,6 +2,13 @@ prepend text
 
 # Changelog
 
+## [1.3.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.1...v1.3.2) (2024-12-13)
+
+
+### Bug Fixes
+
+* removed some quotes ([b243a14](https://github.com/ScottKirvan/ReleasePleaseTest/commit/b243a14f35ff0b7403b6d438ee21e8f308d9323b))
+
 ## [1.3.1](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.0...v1.3.1) (2024-12-13)
 
 
