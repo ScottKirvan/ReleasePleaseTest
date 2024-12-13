@@ -2,6 +2,13 @@ prepend text
 
 # Changelog
 
+## [1.3.3](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.2...v1.3.3) (2024-12-13)
+
+
+### Bug Fixes
+
+* can't figure this ([648dbc1](https://github.com/ScottKirvan/ReleasePleaseTest/commit/648dbc17b3a4cbe67fd88ed3d2dd96cad8db4428))
+
 ## [1.3.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.1...v1.3.2) (2024-12-13)
 
 
