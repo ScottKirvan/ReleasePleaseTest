@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "changelog-path": "notes/CHANGELOG.md"
+      "changelog-path": "/notes/CHANGELOG.md"
     }
   }
 }
