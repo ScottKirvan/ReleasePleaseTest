@@ -209,7 +209,7 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 
 Footnote 1 link[^first].
 
-Footnote 2 link[^second].
+Footnote 2 link[^2].
 
 Inline footnote^[Text of inline footnote] definition.
 
@@ -219,7 +219,7 @@ Duplicated footnote reference[^second].
 
     and multiple paragraphs.
 
-[^second]: Footnote text.
+[^2]: Footnote text.
 
 
 ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
