@@ -1,7 +1,8 @@
 {
   "packages": {
     ".": {
-      "changelog-path": "XCHANGELOG.md"
+      "release-type": "simple",
+      "changelog-path": "notes/CHANGELOG.md"
     }
   }
 }
