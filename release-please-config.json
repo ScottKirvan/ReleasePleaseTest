@@ -1,9 +1,7 @@
 {
-  "release-type": "simple",
   "packages": {
-    "crates/slain-backend": {
-      "xchangelog-path": "/notes/CHANGELOG.md"
-      "thow
+    ".": {
+      "changelog-path": "/notes/CHANGELOG.md"
     }
   }
 }
