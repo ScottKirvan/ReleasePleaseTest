@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.10](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.0...v1.2.10) (2024-12-13)
+
+
+### Bug Fixes
+
+* blah ([c4cc9ce](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c4cc9ce88ff3ddafc68f67ee93dafdcd9b3b1bd4))
+* can't figure this ([648dbc1](https://github.com/ScottKirvan/ReleasePleaseTest/commit/648dbc17b3a4cbe67fd88ed3d2dd96cad8db4428))
+* fml ([4fddabd](https://github.com/ScottKirvan/ReleasePleaseTest/commit/4fddabddac1597ee8195eaf5b05d3f01ced53c7f))
+* removed some quotes ([b243a14](https://github.com/ScottKirvan/ReleasePleaseTest/commit/b243a14f35ff0b7403b6d438ee21e8f308d9323b))
+* rename a file ([16d4097](https://github.com/ScottKirvan/ReleasePleaseTest/commit/16d4097553c3e02b0c1a629889daae399162f609))
+* still trying... ([55c0452](https://github.com/ScottKirvan/ReleasePleaseTest/commit/55c0452f8a37d880da903bc471d17ac98d854d5c))
+* try deleting these old files ([55a1bda](https://github.com/ScottKirvan/ReleasePleaseTest/commit/55a1bda2e8c36d98adce4ca62dc61fcbcf96f94b))
+* update depricated gig ([e4604c4](https://github.com/ScottKirvan/ReleasePleaseTest/commit/e4604c4670077810bb5c7b798dcff76c4d891668))
+
 ## [1.3.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.3...v1.3.0) (2024-12-13)
 
 
