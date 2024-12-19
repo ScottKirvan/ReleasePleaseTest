@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.16](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.15...v1.2.16) (2024-12-19)
+
+
+### Bug Fixes
+
+* snork ([dc8d432](https://github.com/ScottKirvan/ReleasePleaseTest/commit/dc8d4326478b8067938fea15421d3253f5bfc3e1))
+
 ## [1.2.15](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.14...v1.2.15) (2024-12-19)
 
 
