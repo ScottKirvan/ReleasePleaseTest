@@ -7,21 +7,21 @@
     ".": {
       "extra-files": [
         {
-          "type": "plain-text",
+          "type": "simple",
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
           "updater": "generic",
           "search": "VERSION_MAJOR\\s*=\\s*\\d+",
           "replace": "VERSION_MAJOR = {{version_major}}"
         },
         {
-          "type": "plain-text",
+          "type": "simple",
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
           "updater": "generic",
           "search": "VERSION_MINOR\\s*=\\s*\\d+",
           "replace": "VERSION_MINOR = {{version_minor}}"
         },
         {
-          "type": "plain-text",
+          "type": "simple",
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
           "updater": "generic",
           "search": "VERSION_PATCH\\s*=\\s*\\d+",
