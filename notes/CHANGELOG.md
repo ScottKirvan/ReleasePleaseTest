@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.18](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.17...v1.2.18) (2024-12-19)
+
+
+### Bug Fixes
+
+* now getting this to work on the correct branch ([0d6d0fe](https://github.com/ScottKirvan/ReleasePleaseTest/commit/0d6d0fec6e38a89f6c2d1b13e018ca699426a786))
+
 ## [1.2.17](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.16...v1.2.17) (2024-12-19)
 
 
