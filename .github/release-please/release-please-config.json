@@ -6,7 +6,6 @@
   "packages": {
     ".": {
       "extra-files": [
-        "notes/VERSION.md",
         {
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
           "updater": "generic-text",
