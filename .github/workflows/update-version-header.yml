@@ -1,0 +1,33 @@
+name: Update Version Header
+on:
+  workflow_run:
+    workflows: ["release-please"]
+    types:
+      - completed
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Update Version Header
+        run: |
+          # Read version from JSON
+          MAJOR=$(jq -r '.version.major' version.json)
+          MINOR=$(jq -r '.version.minor' version.json)
+          PATCH=$(jq -r '.version.patch' version.json)
+          
+          # Update the header file
+          sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: Update version header file'
+          title: 'Update version header file'
+          body: 'Updates ScooterUtilsVersion.h to match version.json'
+          branch: update-version-header
