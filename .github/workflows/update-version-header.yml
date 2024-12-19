@@ -28,9 +28,9 @@ jobs:
           
           # Update the header file
           echo "Updating Source/ScooterUtils/Public/ScooterUtilsVersion.h"
-          sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
-          sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
-          sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_MAJOR"
+          sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_MINOR"
+          sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_PATCH"
           
           # Print the contents of the header file after updating
           echo "Contents of Source/ScooterUtils/Public/ScooterUtilsVersion.h after update:"
