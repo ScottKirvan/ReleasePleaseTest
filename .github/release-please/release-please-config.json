@@ -8,19 +8,19 @@
       "extra-files": [
         {
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
-          "updater": "generic-text",
+          "updater": "generic",
           "search": "VERSION_MAJOR\\s*=\\s*\\d+",
           "replace": "VERSION_MAJOR = {{version_major}}"
         },
         {
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
-          "updater": "generic-text",
+          "updater": "generic",
           "search": "VERSION_MINOR\\s*=\\s*\\d+",
           "replace": "VERSION_MINOR = {{version_minor}}"
         },
         {
           "path": "Source/ScooterUtils/Public/ScooterUtilsVersion.h",
-          "updater": "generic-text",
+          "updater": "generic",
           "search": "VERSION_PATCH\\s*=\\s*\\d+",
           "replace": "VERSION_PATCH = {{version_patch}}"
         }
