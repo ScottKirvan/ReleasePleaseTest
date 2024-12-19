@@ -61,6 +61,22 @@ _This is italic text_
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
 
+## Callouts / Alerts
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
 
 ## Lists
 
@@ -193,7 +209,7 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 
 Footnote 1 link[^first].
 
-Footnote 2 link[^second].
+Footnote 2 link[^2].
 
 Inline footnote^[Text of inline footnote] definition.
 
@@ -203,7 +219,7 @@ Duplicated footnote reference[^second].
 
     and multiple paragraphs.
 
-[^second]: Footnote text.
+[^2]: Footnote text.
 
 
 ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
