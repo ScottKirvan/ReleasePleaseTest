@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.21](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.20...v1.2.21) (2024-12-19)
+
+
+### Bug Fixes
+
+* adding another digit ([1b07faf](https://github.com/ScottKirvan/ReleasePleaseTest/commit/1b07faf91926c001096466793f846b67a2a254e0))
+* oops, did it again ([dd133fa](https://github.com/ScottKirvan/ReleasePleaseTest/commit/dd133fa0f473767d0bdd48f16dc4bb558f3550e6))
+* trying for version ([cc625e3](https://github.com/ScottKirvan/ReleasePleaseTest/commit/cc625e34e6eb3fb071410557da4ebec92a0fe675))
+
 ## [1.2.20](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.19...v1.2.20) (2024-12-19)
 
 
