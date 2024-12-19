@@ -14,10 +14,11 @@ jobs:
       
       - name: Update Version Header
         run: |
-          # Read version from JSON
-          MAJOR=$(jq -r '.version.major' version.json)
-          MINOR=$(jq -r '.version.minor' version.json)
-          PATCH=$(jq -r '.version.patch' version.json)
+          # Read version string and split into components
+          VERSION=$(jq -r '.version' version.json)
+          MAJOR=$(echo $VERSION | cut -d. -f1)
+          MINOR=$(echo $VERSION | cut -d. -f2)
+          PATCH=$(echo $VERSION | cut -d. -f3)
           
           # Update the header file
           sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
