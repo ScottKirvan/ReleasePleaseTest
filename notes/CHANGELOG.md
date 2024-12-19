@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.13](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.12...v1.2.13) (2024-12-19)
+
+
+### Bug Fixes
+
+* queue up a release PR ([646defb](https://github.com/ScottKirvan/ReleasePleaseTest/commit/646defb52129d108f0beec86c996823ec259455c))
+
 ## [1.2.12](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.11...v1.2.12) (2024-12-19)
 
 
