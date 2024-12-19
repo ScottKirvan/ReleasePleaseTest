@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.19](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.18...v1.2.19) (2024-12-19)
+
+
+### Bug Fixes
+
+* lets try modifying the uplugin file with release-please ([f537739](https://github.com/ScottKirvan/ReleasePleaseTest/commit/f537739d7e1b1afc16e5b6132310d71054ab7a7c))
+* sed ([3d6c3b1](https://github.com/ScottKirvan/ReleasePleaseTest/commit/3d6c3b19c4363a84b6f08606f90d5540c76203cc))
+
 ## [1.2.18](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.17...v1.2.18) (2024-12-19)
 
 
