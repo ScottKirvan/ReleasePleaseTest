@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.12](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.11...v1.2.12) (2024-12-19)
+
+
+### Bug Fixes
+
+* delete files ([d536cf3](https://github.com/ScottKirvan/ReleasePleaseTest/commit/d536cf3b2bf8b6fbea438f2861a2946185c5aea7))
+* make release-please edit version.h file ([daa9bd3](https://github.com/ScottKirvan/ReleasePleaseTest/commit/daa9bd317ab9c41ad35c83b6cbde23e4e1a2f913))
+
 ## [1.2.11](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.10...v1.2.11) (2024-12-19)
 
 
