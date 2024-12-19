@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.23](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.22...v1.2.23) (2024-12-19)
+
+
+### Bug Fixes
+
+* make a new build... weird behavior ([08d7460](https://github.com/ScottKirvan/ReleasePleaseTest/commit/08d74605b40c059794739e2b77775503f4058ba9))
+* ok - I just deleted a line here by accident.  Trying again... ([1f10919](https://github.com/ScottKirvan/ReleasePleaseTest/commit/1f1091909d7a921b76b5ddb40a3ea4d70d28a967))
+
 ## [1.2.22](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.21...v1.2.22) (2024-12-19)
 
 
