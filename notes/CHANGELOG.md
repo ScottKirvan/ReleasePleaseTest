@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.17](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.16...v1.2.17) (2024-12-19)
+
+
+### Bug Fixes
+
+* girgle ([c646c7d](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c646c7d4f47257df3103b7f7b2ca32858282b6a0))
+* grumph ([a67e047](https://github.com/ScottKirvan/ReleasePleaseTest/commit/a67e04718bbc192916565cb3612dc0abadc64862))
+* I think this sed will work ([cb703e7](https://github.com/ScottKirvan/ReleasePleaseTest/commit/cb703e70d69f7dda14d4338747e9e9849c50c9e4))
+
 ## [1.2.16](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.15...v1.2.16) (2024-12-19)
 
 
