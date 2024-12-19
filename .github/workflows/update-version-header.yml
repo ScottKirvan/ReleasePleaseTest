@@ -30,6 +30,7 @@ jobs:
           echo "Contents of Source/ScooterUtils/Public/ScooterUtilsVersion.h before update:"
           cat Source/ScooterUtils/Public/ScooterUtilsVersion.h
           
+
           # Update the header file
           echo "Updating Source/ScooterUtils/Public/ScooterUtilsVersion.h"
           sed -i 's/#define VERSION_MAJOR [0-9]*/#define VERSION_MAJOR '"$MAJOR"'/' Source/ScooterUtils/Public/ScooterUtilsVersion.h
