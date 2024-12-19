@@ -51,8 +51,8 @@ jobs:
           #sed -i 's/"Version": [0-9]*\.[0-9]*\.[0-9]*/"Version": '"$VERSION"'/' ScooterUtils.uplugin
           #if [ $? -eq 0 ]; then echo "uplugin Version updated successfully"; else echo "Failed to update uplugin Version"; fi
 
-          echo "sed -i 's/"VersionName": "v[0-9]*\.[0-9]*\.[0-9]*"/"VersionName": "v'"$VERSION"'"/' ScooterUtils.uplugin"
-          sed -i 's/"VersionName": "v[0-9]*\.[0-9]*\.[0-9]*"/"VersionName": "v'"$VERSION"'"/' ScooterUtils.uplugin
+          echo "sed -i 's/"VersionName": "v[0-9]*\.[0-9]*\.[0-9]*"/"VersionName": "v'$VERSION'"/' ScooterUtils.uplugin"
+          sed -i 's/"VersionName": "v[0-9]*\.[0-9]*\.[0-9]*"/"VersionName": "v'$VERSION'"/' ScooterUtils.uplugin
           if [ $? -eq 0 ]; then echo "uplugin VersionName updated successfully"; else echo "Failed to update upluginVersionName"; fi
        
           
