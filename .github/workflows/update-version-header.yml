@@ -1,7 +1,7 @@
 name: Update Version Header
 on:
   workflow_run:
-    workflows: ["release-please"]
+    workflows: ["Release Workflow"]
     types:
       - completed
 
