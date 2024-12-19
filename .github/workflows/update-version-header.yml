@@ -28,9 +28,15 @@ jobs:
           
           # Update the header file
           echo "Updating Source/ScooterUtils/Public/ScooterUtilsVersion.h"
-          sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_MAJOR"
-          sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_MINOR"
-          sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h || echo "Failed to update VERSION_PATCH"
+          sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          if [ $? -eq 0 ]; then echo "VERSION_MAJOR updated successfully"; else echo "Failed to update VERSION_MAJOR"; fi
+          
+          sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          if [ $? -eq 0 ]; then echo "VERSION_MINOR updated successfully"; else echo "Failed to update VERSION_MINOR"; fi
+          
+          sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          if [ $? -eq 0 ]; then echo "VERSION_PATCH updated successfully"; else echo "Failed to update VERSION_PATCH"; fi
+       
           
           # Print the contents of the header file after updating
           echo "Contents of Source/ScooterUtils/Public/ScooterUtilsVersion.h after update:"
