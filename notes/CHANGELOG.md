@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.11](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.10...v1.2.11) (2024-12-19)
+
+
+### Bug Fixes
+
+* blah ([ff9c034](https://github.com/ScottKirvan/ReleasePleaseTest/commit/ff9c034e752e4e1ed19aba2798013bf8b8da14c9))
+
 ## [1.2.10](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.10...v1.2.10) (2024-12-19)
 
 
