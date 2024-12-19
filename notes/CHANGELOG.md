@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.20](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.19...v1.2.20) (2024-12-19)
+
+
+### Bug Fixes
+
+* blah ([c85b8cf](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c85b8cf1a2986d9b349315fe95c8e1aab5dacb72))
+* buggage ([ea55b8e](https://github.com/ScottKirvan/ReleasePleaseTest/commit/ea55b8efbe8c3a5343863f75e26e668c8e27cc96))
+* debugging code ([0335aaa](https://github.com/ScottKirvan/ReleasePleaseTest/commit/0335aaaa734f467c6cbf0c1651fc387c28df0cdf))
+* fix push error ([d8d2345](https://github.com/ScottKirvan/ReleasePleaseTest/commit/d8d2345bc62b76822b1b59734aa18ca825f8945e))
+* force a sed pattern match? ([3445b6c](https://github.com/ScottKirvan/ReleasePleaseTest/commit/3445b6cd335cf60ee16421af5d93a39b1b8d243b))
+* forgot to tag last checkin ([1e30fc8](https://github.com/ScottKirvan/ReleasePleaseTest/commit/1e30fc88cdc62d9f1f24435527add208fcd2d0e8))
+* hmm.... ([cce68ef](https://github.com/ScottKirvan/ReleasePleaseTest/commit/cce68ef54d2f37706b2115b7b5d5524bf813d136))
+* sed say ([c0d139e](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c0d139e29f94e224e69ed3ca4a2174a8aadb33da))
+* this is crazy making ([007a10f](https://github.com/ScottKirvan/ReleasePleaseTest/commit/007a10febec14ef53587f4efc9d72e331a0569bd))
+
 ## [1.2.19](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.18...v1.2.19) (2024-12-19)
 
 
