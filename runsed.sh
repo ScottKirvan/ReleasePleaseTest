@@ -7,7 +7,7 @@ pwd
 VERSION="1.2.13"
 echo "Version: $VERSION"
 
-PATCH=17
+PATCH=3
 echo "Major: $PATCH"
 
 
