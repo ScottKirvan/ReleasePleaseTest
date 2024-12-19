@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 2024121201,
+	"VersionName": "v1.2.0.2024121201",
+	"FriendlyName": "Scooter Utilities",
+	"Description": "Miscellaneous Utilities for Unreal Engine",
+	"Category": "Utility",
+	"CreatedBy": "Scott Kirvan",
+	"CreatedByURL": "https://www.skvfx.com",
+	"DocsURL": "https://www.scottkirvan.com/ScooterUtils/notes/USER_README",
+	"MarketplaceURL": "",
+	"FabURL" : "com.epicgames.launcher://ue/Fab/product/ea5c3e55-aa60-4c50-9503-333b09874199",
+	"SupportURL": "https://github.com/ScottKirvan/ScooterUtils/discussions",
+	"EngineVersion": "5.5.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ScooterUtils",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+			"WhitelistPlatforms": [ "Win64", "Win32", "Mac", "Linux" ]
+		}
+	],
+	"IsBetaVersion": false,
+	"EnabledByDefault": true,
+	"IsExperimentalVersion": false
+}

@@ -40,6 +40,9 @@ jobs:
           
           sed -i 's/#define VERSION_PATCH [0-9]*/#define VERSION_PATCH '"$PATCH"'/' Source/ScooterUtils/Public/ScooterUtilsVersion.h
           if [ $? -eq 0 ]; then echo "VERSION_PATCH updated successfully"; else echo "Failed to update VERSION_PATCH"; fi
+
+          sed -i 's/"Version": "[0-9]*.[0-9]*.[0-9]*"/"Version": "'"$VERSION"'"/' ScooterUtils.uplugin
+          sed -i 's/"VersionName": "[0-9]*.[0-9]*.[0-9]*"/"Version": "'"$VERSION"'"/' ScooterUtils.uplugin
        
           
           # Print the contents of the header file after updating
