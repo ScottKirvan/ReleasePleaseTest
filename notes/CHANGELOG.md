@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.14](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.13...v1.2.14) (2024-12-19)
+
+
+### Bug Fixes
+
+* da' buggin' ([fee8887](https://github.com/ScottKirvan/ReleasePleaseTest/commit/fee88872aebe0d33908705cd0ba7c747b3e20ef5))
+* why not? ([c747c2b](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c747c2be38c2585913c9e671b7c92beb04750a73))
+
 ## [1.2.13](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.12...v1.2.13) (2024-12-19)
 
 
