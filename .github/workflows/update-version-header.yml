@@ -16,14 +16,27 @@ jobs:
         run: |
           # Read version string and split into components
           VERSION=$(jq -r '.version' version.json)
+          echo "Version: $VERSION"
           MAJOR=$(echo $VERSION | cut -d. -f1)
           MINOR=$(echo $VERSION | cut -d. -f2)
           PATCH=$(echo $VERSION | cut -d. -f3)
+          echo "Major: $MAJOR, Minor: $MINOR, Patch: $PATCH"
+
+          # Print the contents of the header file before updating
+          echo "Contents of Source/ScooterUtils/Public/ScooterUtilsVersion.h before update:"
+          cat Source/ScooterUtils/Public/ScooterUtilsVersion.h
           
           # Update the header file
+          echo "Updating Source/ScooterUtils/Public/ScooterUtilsVersion.h"
           sed -i "s/VERSION_MAJOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MAJOR = $MAJOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
           sed -i "s/VERSION_MINOR[[:space:]]*=[[:space:]]*[0-9]*/VERSION_MINOR = $MINOR/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
           sed -i "s/VERSION_PATCH[[:space:]]*=[[:space:]]*[0-9]*/VERSION_PATCH = $PATCH/" Source/ScooterUtils/Public/ScooterUtilsVersion.h
+          
+          # Print the contents of the header file after updating
+          echo "Contents of Source/ScooterUtils/Public/ScooterUtilsVersion.h after update:"
+          cat Source/ScooterUtils/Public/ScooterUtilsVersion.h
+
+          echo "Update complete"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
