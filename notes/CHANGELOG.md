@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.23...v1.3.0) (2026-06-29)
+
+
+### Features
+
+* wire release workflow to shared reusable workflows ([aa2b2ab](https://github.com/ScottKirvan/ReleasePleaseTest/commit/aa2b2abfe1f09e0af625eb1d0fc43f2bf46f17e5))
+
+
+### Bug Fixes
+
+* add models: read permission required by reusable-release-notes workflow ([1a21d10](https://github.com/ScottKirvan/ReleasePleaseTest/commit/1a21d105875dd5b6599118d84874d8b78d70b830))
+* update reusable workflow refs to ScottKirvan/.github ([80f51b8](https://github.com/ScottKirvan/ReleasePleaseTest/commit/80f51b874caddfce8d8beb91e11a225a1c7e55cc))
+
 ## [1.2.23](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.22...v1.2.23) (2025-11-24)
 
 
