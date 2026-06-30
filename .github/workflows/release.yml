@@ -40,7 +40,7 @@ jobs:
         ---
       footer: |
         ---
-        🔧 [Workflow Source](https://github.com/ScottKirvan/.github) · 🐛 [Report an Issue](https://github.com/ScottKirvan/ReleasePleaseTest/issues/new) · 💬 [Discord](https://discord.gg/TSKHvVFYxB)
+        🐛 [Report an Issue](https://github.com/ScottKirvan/ReleasePleaseTest/issues/new) · 💬 [Discord](https://discord.gg/TSKHvVFYxB)
     secrets: inherit
 
   discord-notify:
