@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.1...v1.4.2) (2026-06-30)
+
+
+### Bug Fixes
+
+* remove workflow source link from release footer ([bda7b30](https://github.com/ScottKirvan/ReleasePleaseTest/commit/bda7b305726e9903d30919de26a5264e18f91f38))
+* update Discord invite URL to correct server link ([c95ed59](https://github.com/ScottKirvan/ReleasePleaseTest/commit/c95ed59f48231f2b9204f5cde7094b1b2db9f103))
+
 ## [1.4.1](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.0...v1.4.1) (2026-06-30)
 
 
