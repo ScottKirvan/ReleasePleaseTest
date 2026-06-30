@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.0...v1.4.1) (2026-06-30)
+
+
+### Bug Fixes
+
+* add project_name, header, and footer to release workflow for testing ([ab00639](https://github.com/ScottKirvan/ReleasePleaseTest/commit/ab00639da5483a46ba82bc7fd5daf52fe361c584))
+
 ## [1.4.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.0...v1.4.0) (2026-06-30)
 
 
