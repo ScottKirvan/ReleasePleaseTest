@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.3.0...v1.4.0) (2026-06-30)
+
+
+### Features
+
+* pass project_name to updated release-notes workflow ([1db74b4](https://github.com/ScottKirvan/ReleasePleaseTest/commit/1db74b4e56dc12660bc57275b14fd46079ce766f))
+
 ## [1.3.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.2.23...v1.3.0) (2026-06-29)
 
 
