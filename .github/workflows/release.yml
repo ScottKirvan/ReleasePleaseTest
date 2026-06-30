@@ -30,6 +30,7 @@ jobs:
     uses: ScottKirvan/.github/.github/workflows/reusable-release-notes.yml@main
     with:
       tag_name: ${{ needs.release-please.outputs.tag_name }}
+      project_name: "ReleasePleaseTest"
       project_context: "ReleasePleaseTest is a sandbox repo for testing shared GitHub Actions workflows and release automation patterns."
     secrets: inherit
 
