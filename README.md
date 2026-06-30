@@ -69,7 +69,7 @@ Contributions / Contact
 -----------------------
 - Please [file an issue](https://github.com/ScottKirvan/ScooterGitTemplate/issues/), or grab a fork, hack away, and submit some [pull requests](https://github.com/ScottKirvan/ScooterGitTemplate/pulls).
 - Contact me at [linkedin.com/in/scottkirvan/](https://www.linkedin.com/in/scottkirvan/)
-- You can also contact me at my [discord](https://discord.gg/TSKHvVFYxB) server, I'm cptvideo.
+- You can also contact me at my [discord](https://discord.gg/TN6XJSNK5Y) server, I'm cptvideo.
 
 Credits
 -------
