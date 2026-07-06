@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.2...v1.4.3) (2026-07-06)
+
+
+### Bug Fixes
+
+* add update-changelog-prs job to release workflow ([0696f64](https://github.com/ScottKirvan/ReleasePleaseTest/commit/0696f64333855b1455b208ac2d0bdbf82bc957cd))
+
 ## [1.4.2](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.1...v1.4.2) (2026-06-30)
 
 
