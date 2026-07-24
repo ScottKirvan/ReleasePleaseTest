@@ -27,7 +27,7 @@ jobs:
   improve-release-notes:
     needs: release-please
     if: ${{ needs.release-please.outputs.release_created }}
-    uses: ScottKirvan/.github/.github/workflows/reusable-release-notes.yml@main
+    uses: ./.github/workflows/local-release-notes.yml
     with:
       tag_name: ${{ needs.release-please.outputs.tag_name }}
       project_name: "ReleasePleaseTest"
@@ -53,8 +53,9 @@ jobs:
   discord-notify:
     needs: [release-please, improve-release-notes]
     if: ${{ needs.release-please.outputs.release_created }}
-    uses: ScottKirvan/.github/.github/workflows/reusable-discord-notify.yml@main
+    uses: ./.github/workflows/local-discord-notify.yml
     with:
       tag_name: ${{ needs.release-please.outputs.tag_name }}
       project_name: "ReleasePleaseTest"
-    secrets: inherit
+    secrets:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_TEST }}

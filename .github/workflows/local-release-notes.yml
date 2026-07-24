@@ -1,0 +1,190 @@
+name: Local — AI Release Notes (sandbox)
+
+on:
+  workflow_call:
+    inputs:
+      tag_name:
+        description: Release tag to rewrite notes for
+        required: true
+        type: string
+      project_name:
+        description: Human-readable display name (e.g. "QuKi Notes", not "QuKi-Notes")
+        required: true
+        type: string
+      project_context:
+        description: One or two sentences describing the project and its audience
+        required: true
+        type: string
+      header:
+        description: Optional markdown block prepended before the AI-generated notes
+        required: false
+        type: string
+        default: ""
+      footer:
+        description: Optional markdown block appended after the AI-generated notes
+        required: false
+        type: string
+        default: ""
+      changelog_path:
+        description: Repo-relative path to the changelog file (appended as a link in the release notes footer)
+        required: false
+        type: string
+        default: notes/CHANGELOG.md
+      model:
+        description: GitHub Models model identifier
+        required: false
+        type: string
+        default: openai/gpt-4o
+
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Release tag to rewrite notes for (e.g. v0.1.0)
+        required: true
+        type: string
+      project_name:
+        description: Human-readable display name
+        required: false
+        type: string
+        default: "ReleasePleaseTest"
+      project_context:
+        description: One or two sentences describing the project and its audience
+        required: false
+        type: string
+        default: "ReleasePleaseTest is a sandbox repo for testing shared GitHub Actions workflows and release automation patterns."
+      header:
+        description: Optional markdown block prepended before the AI-generated notes
+        required: false
+        type: string
+        default: ""
+      footer:
+        description: Optional markdown block appended after the AI-generated notes
+        required: false
+        type: string
+        default: ""
+      changelog_path:
+        description: Repo-relative path to the changelog file
+        required: false
+        type: string
+        default: notes/CHANGELOG.md
+      model:
+        description: GitHub Models model identifier
+        required: false
+        type: string
+        default: openai/gpt-4o
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  rewrite-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch release notes, commit history, and PR descriptions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag_name }}
+          REPO: ${{ github.repository }}
+          PROJECT_NAME: ${{ inputs.project_name }}
+          PROJECT_CONTEXT: ${{ inputs.project_context }}
+        run: |
+          # Current release body from release-please
+          gh release view "$TAG" --repo "$REPO" --json body -q '.body' > /tmp/raw_notes.md
+
+          # Find the previous release tag (sorted by publish date, skip current)
+          PREV_TAG=$(gh release list --repo "$REPO" --limit 20 --json tagName,publishedAt \
+            | jq -r --arg tag "$TAG" \
+            '[.[] | select(.tagName != $tag)] | sort_by(.publishedAt) | reverse | .[0].tagName // ""')
+
+          # Fetch commit messages between tags (or from repo root if no previous release)
+          if [ -n "$PREV_TAG" ]; then
+            gh api "repos/$REPO/compare/$PREV_TAG...$TAG" \
+              --jq '.commits[] | "- " + (.commit.message | split("\n") | .[0])' \
+              > /tmp/commits.txt 2>/dev/null || true
+          fi
+
+          # Extract PR numbers from commit messages and fetch PR title + body
+          if [ -f /tmp/commits.txt ]; then
+            grep -oE '#[0-9]+' /tmp/commits.txt | tr -d '#' | sort -u | while read PR_NUM; do
+              gh pr view "$PR_NUM" --repo "$REPO" --json title,body \
+                --jq '"### PR #\(env.PR_NUM): \(.title)\n\(.body)"' 2>/dev/null || true
+            done > /tmp/pr_bodies.txt
+          fi
+
+          # Assemble full prompt
+          {
+            printf 'Project name: %s\n' "$PROJECT_NAME"
+            printf 'Project context: %s\n\n' "$PROJECT_CONTEXT"
+            printf '## Release summary (generated changelog)\n'
+            cat /tmp/raw_notes.md
+            if [ -f /tmp/commits.txt ] && [ -s /tmp/commits.txt ]; then
+              printf '\n## Commits in this release\n'
+              cat /tmp/commits.txt
+            fi
+            if [ -f /tmp/pr_bodies.txt ] && [ -s /tmp/pr_bodies.txt ]; then
+              printf '\n## Merged pull request details\n'
+              cat /tmp/pr_bodies.txt
+            fi
+          } > /tmp/prompt.txt
+
+      - name: Rewrite notes as narrative with AI
+        id: ai
+        uses: actions/ai-inference@v2
+        with:
+          model: ${{ inputs.model }}
+          max-completion-tokens: 2000
+          temperature: 0.5
+          system-prompt: |
+            You are a technical writer crafting release announcements for an open source project used by everyday people, not just developers.
+            Always refer to the project by its exact name as given in "Project name:" — do not substitute a different name.
+
+            Structure your output in two parts:
+
+            First, write 1–2 paragraphs of flowing prose. No bullet points or headers in this section.
+            Use one short, concise paragraph for small patches or minor fixes. Use two paragraphs when there are multiple significant changes across different areas.
+            Lead with the most significant change or the theme of the release — what does this release actually do for the user?
+            Be specific: name the features, behaviors, or bugs that matter. A reader should finish knowing exactly what changed and why it's worth the update.
+            Write plainly for a general audience — clear and direct, not dumbed down, but never assuming the reader is a developer.
+            Write with conviction; let the significance of the work come through without resorting to hype or exclamation points.
+            Do not mention documentation updates, internal refactoring, or future plans — only changes the user will notice.
+            Do not repeat the same point across paragraphs.
+            No marketing language. Do not invent anything not present in the input.
+
+            Then, after the prose, add this exact heading followed by a tight bullet list for skimmers:
+
+            ### What Changed
+            - one sentence per item, plain language, no fluff
+
+            Output only these two parts — no preamble, no sign-off, no extra text.
+          prompt-file: /tmp/prompt.txt
+
+      - name: Assemble and publish release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag_name }}
+          REPO: ${{ github.repository }}
+          HEADER: ${{ inputs.header }}
+          AI_NOTES: ${{ steps.ai.outputs.response }}
+          FOOTER: ${{ inputs.footer }}
+          CHANGELOG_PATH: ${{ inputs.changelog_path }}
+        run: |
+          TRIMMED_FOOTER=$(printf '%s' "$FOOTER" | sed 's/[[:space:]]*$//')
+          if [ -n "$CHANGELOG_PATH" ]; then
+            CHANGELOG_URL="https://github.com/$REPO/blob/main/$CHANGELOG_PATH"
+            if [ -n "$TRIMMED_FOOTER" ]; then
+              FULL_FOOTER="${TRIMMED_FOOTER} · 📋 [Changelog](${CHANGELOG_URL})"
+            else
+              FULL_FOOTER="📋 [Changelog](${CHANGELOG_URL})"
+            fi
+          else
+            FULL_FOOTER="$FOOTER"
+          fi
+
+          {
+            if [ -n "$HEADER" ]; then printf '%s\n\n' "$HEADER"; fi
+            printf '%s\n' "$AI_NOTES"
+            if [ -n "$FULL_FOOTER" ]; then printf '\n%s\n' "$FULL_FOOTER"; fi
+          } > /tmp/release_notes.md
+          gh release edit "$TAG" --repo "$REPO" --notes-file /tmp/release_notes.md
+          echo "Release notes updated for $TAG"
