@@ -47,9 +47,9 @@ jobs:
           # Read the (already AI-improved) release notes from the GitHub API
           NOTES=$(gh release view "$TAG" --repo "$REPO" --json body -q '.body')
 
-          # Strip header (before first ---) and footer (after last ---), keeping only the changelog bullets.
-          # Falls back to the full body if no --- separators are present.
-          CLEAN_NOTES=$(echo "$NOTES" | awk '/^---$/{count++; next} count==1')
+          # Extract just the ### What Changed bullet list for Discord — keeps the message brief.
+          # Falls back to full body if the section isn't found.
+          CLEAN_NOTES=$(echo "$NOTES" | awk '/^### What Changed/{found=1} found{print} /^---$/ && found{exit}' | grep -v '^---$')
           [ -z "$CLEAN_NOTES" ] && CLEAN_NOTES="$NOTES"
 
           PAYLOAD=$(jq -n \
