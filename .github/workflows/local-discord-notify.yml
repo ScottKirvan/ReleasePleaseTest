@@ -1,0 +1,70 @@
+name: Local — Discord Release Notification (sandbox)
+
+on:
+  workflow_call:
+    inputs:
+      tag_name:
+        description: Release tag to announce
+        required: true
+        type: string
+      project_name:
+        description: Human-readable project name for the Discord message
+        required: true
+        type: string
+      color:
+        description: Discord embed color as a decimal integer
+        required: false
+        type: number
+        default: 5814783
+      emoji:
+        description: Emoji prefix for the announcement line
+        required: false
+        type: string
+        default: "🚀"
+    secrets:
+      DISCORD_WEBHOOK:
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post release to Discord
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          TAG: ${{ inputs.tag_name }}
+          PROJECT_NAME: ${{ inputs.project_name }}
+          COLOR: ${{ inputs.color }}
+          EMOJI: ${{ inputs.emoji }}
+          REPO: ${{ github.repository }}
+        run: |
+          RELEASE_URL="https://github.com/$REPO/releases/tag/$TAG"
+
+          # Read the (already AI-improved) release notes from the GitHub API
+          NOTES=$(gh release view "$TAG" --repo "$REPO" --json body -q '.body')
+
+          # Strip header (before first ---) and footer (after last ---), keeping only the changelog bullets.
+          # Falls back to the full body if no --- separators are present.
+          CLEAN_NOTES=$(echo "$NOTES" | awk '/^---$/{count++; next} count==1')
+          [ -z "$CLEAN_NOTES" ] && CLEAN_NOTES="$NOTES"
+
+          PAYLOAD=$(jq -n \
+            --arg content "$EMOJI **$PROJECT_NAME $TAG Published**" \
+            --arg desc "$CLEAN_NOTES" \
+            --arg url "$RELEASE_URL" \
+            --argjson color "$COLOR" \
+            '{
+              content: $content,
+              embeds: [{
+                title: "Downloads",
+                description: ($desc | .[0:4000]),
+                url: $url,
+                color: $color
+              }]
+            }')
+
+          curl -fsSL -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK"
