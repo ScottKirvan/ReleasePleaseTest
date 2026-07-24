@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.3...v1.5.0) (2026-07-24)
+
+
+### Features
+
+* add local sandbox copies of release-notes and discord-notify workflows ([3fd95ce](https://github.com/ScottKirvan/ReleasePleaseTest/commit/3fd95cece3012ae50fd94751ea434e8987b23957))
+
 ## [1.4.3](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.2...v1.4.3) (2026-07-06)
 
 
