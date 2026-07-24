@@ -7,6 +7,8 @@
 
 * send only What Changed bullet list to Discord, not full narrative ([e11eadd](https://github.com/ScottKirvan/ReleasePleaseTest/commit/e11eadda98400caf1884dd6678536f82efa945d4))
 
+Includes PRs: [#52](https://github.com/ScottKirvan/ReleasePleaseTest/pull/52), [#53](https://github.com/ScottKirvan/ReleasePleaseTest/pull/53)
+
 ## [1.5.0](https://github.com/ScottKirvan/ReleasePleaseTest/compare/v1.4.3...v1.5.0) (2026-07-24)
 
 
